@@ -20,6 +20,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build the Docker Image
-        run: docker build . --file Dockerfile --tag ${{ github.repository }}/test
+        run: docker build . --file Dockerfile --tag servicecreation/test
       - name: Push the Docker image to Dockerhub
-        run: docker push ${{ github.repository }}/test
+        run: docker push servicecreation/test
